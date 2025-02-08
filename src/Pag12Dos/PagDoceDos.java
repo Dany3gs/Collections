@@ -1,4 +1,4 @@
-package Pag12;
+package Pag12Dos;
 
 /*
 Desarrolla un programa que inserte 1000 registros en un ArrayList y en un LinkedList.
