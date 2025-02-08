@@ -1,19 +1,21 @@
 package Pag7;
 
+import com.sun.source.tree.IfTree;
+
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Iterator;
 
 public class ListarIncidencias {
     private ArrayList<Incidencias> listaIncidencias;
 
-
     public ListarIncidencias() {
         listaIncidencias = new ArrayList<>();
     }
-
-
-    public void cargarIncidencias(Incidencias incidencia) {
-        listaIncidencias.add(incidencia);
+    
+    //
+    public Incidencias cargarIncidencias(int idIncidencia, int idInspector, String descripcionIncidencia, LocalDate fechaIncidencia, String nivelError) {
+        return (new Incidencias(idIncidencia,idInspector, descripcionIncidencia, fechaIncidencia, nivelError));
     }
 
     public void listarIncidencias() {
@@ -28,9 +30,7 @@ public class ListarIncidencias {
     }
 
     public void anadirIncidencia(Incidencias incidencia) {
-        if (incidencia != null) {
             listaIncidencias.add(incidencia);
-        }
     }
 
     public boolean eliminarIncidencia(int idIncidencia) {

@@ -38,9 +38,14 @@ public class PagSiete {
 
         // Instanciamos nuevo objeto como lista de incidencias
         ListarIncidencias misIncidencias = new ListarIncidencias();
+        
+        // Creamos una incidencia usando el método cargarIncidencias y luego la añadimos a la colección
+        Incidencias incidencia1 = misIncidencias.cargarIncidencias(1234, 1,
+                "Fallo de colocación luneta trasera", LocalDate.of(2019, 2, 1),
+                "Medio");
+        misIncidencias.anadirIncidencia(incidencia1);
 
-        // Creamos una incidencia y mostramos
-        misIncidencias.cargarIncidencias(new Incidencias(1234, 1, "Fallo de colocación luneta trasera", LocalDate.of(2019, 2, 1), "Medio"));
+        // Mostramos lista de incidencias
         misIncidencias.listarIncidencias();
         System.out.println("*************************");
         System.out.println("");
@@ -51,25 +56,25 @@ public class PagSiete {
         misIncidencias.anadirIncidencia(new Incidencias(12,4,"Pérdida", LocalDate.now(),"Leve"));
         misIncidencias.anadirIncidencia(new Incidencias(34,5,"Rotura", LocalDate.now(),"Grave"));
         misIncidencias.listarIncidencias();
-        System.out.println("*************************");
         System.out.println("");
-
+        System.out.println("*************************");
+        
         // Eliminamos la incidencia 33 y listamos, ahora no aparece
         misIncidencias.eliminarIncidencia(33);
+        System.out.println("*************************");
+        System.out.println("");
         misIncidencias.listarIncidencias();
-        System.out.println("*************************");
+        
         System.out.println("");
-
-        // Comprobamos si existe la incidencia 1284 y mostramos listado
+        System.out.println("*************************");
+        // Comprobamos si existe la incidencia 1284(no existe)
         misIncidencias.existeIncidencia(1284);
-
         System.out.println("*************************");
         System.out.println("");
 
-
-        // Comprobar si existe una incidencia
+        // Comprobar si existe la incidencia 2345
         misIncidencias.anadirIncidencia(new Incidencias(2345,12,"Fuga", LocalDate.now(),"Grave"));
-
+        misIncidencias.listarIncidencias();
         misIncidencias.existeIncidencia(2345);
     }
 }
