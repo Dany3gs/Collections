@@ -16,24 +16,35 @@ public class PagDoceDos {
 		// A medir desde --------------------------------
 		long startTime1 = System.nanoTime();
 		ArrayList listaArray = new ArrayList();
-		
+
+		// Rellenamos el ArrayList con 1000 elementos
 		for (int i = 0; i < 1000; i++) {
 			listaArray.add(i);
 		}
-		System.out.println(listaArray.get(100));
+
+		// Mostramos los primeros 100 elementos
+		System.out.println("Los elementos son: " + listaArray.get(100));
 		long endTime1 = System.nanoTime();
 		// A medir hasta --------------------------------
 		
 		System.out.println("Tiempo de ejecución del ArrayList: " + (endTime1 - startTime1) + " nanosegundos");
 		System.out.println("-------------------------------------");
-		
+
 		// A medir desde --------------------------------
 		long startTime2 = System.nanoTime();
+
+		// Creamos el LinkedList
 		LinkedList listaLinkedList = new LinkedList();
+
+		// Rellenamos el LinkedList con 1000 elementos
 		for (int i = 0; i < 1000; i++) {
 			listaLinkedList.add(i);
 		}
-		System.out.println(listaLinkedList.get(100));
+
+		// Mostramos los primeros 100 elementos
+		System.out.println("Los elementos son: " + listaLinkedList.get(100));
+
+		// Finalizamos el nanoTime para que calcule hasta aquí el tiempo de ejection
 		long endTime2 = System.nanoTime();
 		// A medir hasta --------------------------------
 		
