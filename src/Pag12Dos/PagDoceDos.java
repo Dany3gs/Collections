@@ -54,3 +54,4 @@ public class PagDoceDos {
 		System.out.println("Indicando que el LinkedList es más lento que el ArrayList en esta operación.");
 	}
 }
+// Por varios factores de la JVM puede que el ArrayList sea más lento, o la versión de Java o entornos diferentes.
