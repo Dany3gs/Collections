@@ -70,11 +70,18 @@ public class PagSiete {
         // Comprobamos si existe la incidencia 1284(no existe)
         misIncidencias.existeIncidencia(1284);
         System.out.println("*************************");
+<<<<<<< HEAD
         System.out.println("");
 
         // Comprobar si existe la incidencia 2345
         misIncidencias.anadirIncidencia(new Incidencias(2345,12,"Fuga", LocalDate.now(),"Grave"));
         misIncidencias.listarIncidencias();
         misIncidencias.existeIncidencia(2345);
+=======
+
+        // Comprobar si existe una incidencia
+        //misIncidencias.anadirIncidencia(new Incidencias(2345,12,"Fuga", LocalDate.now(),"Grave"));
+        misIncidencias.existeIncidencia(12);
+>>>>>>> 7b6deb7 (Update changes)
     }
 }
